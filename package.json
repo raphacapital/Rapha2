@@ -1,0 +1,43 @@
+{
+  "name": "raphaapp",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build:ios": "eas build --platform ios",
+    "build:android": "eas build --platform android",
+    "build:all": "eas build --platform all",
+    "preview": "expo start --tunnel",
+    "lint": "npx eslint . --ext .ts,.tsx",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^14.1.0",
+    "@react-navigation/bottom-tabs": "^7.4.4",
+    "@react-navigation/native": "^7.1.16",
+    "@react-navigation/stack": "^7.4.4",
+    "@supabase/supabase-js": "^2.53.0",
+    "expo": "~53.0.20",
+    "expo-apple-authentication": "~7.2.4",
+    "expo-auth-session": "~6.2.1",
+    "expo-crypto": "~14.1.5",
+    "expo-gl": "~15.1.7",
+    "expo-status-bar": "~2.2.3",
+    "expo-web-browser": "~14.2.0",
+    "ogl": "^1.0.11",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-gesture-handler": "^2.27.2",
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-screens": "^4.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true
+}
