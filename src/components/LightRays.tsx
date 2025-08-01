@@ -175,19 +175,19 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
   // Create multiple rays all starting from the same point but with different angles
   vec4 rays1 = vec4(1.0) *
-               rayStrength(rayPos, normalize(finalRayDir + vec2(-0.05, 0.0)), coord, 36.2214, 21.11349,
+               rayStrength(rayPos, normalize(finalRayDir + vec2(-0.15, 0.0)), coord, 36.2214, 21.11349,
                            raysSpeed);
   vec4 rays2 = vec4(1.0) *
-               rayStrength(rayPos, normalize(finalRayDir + vec2(-0.025, 0.0)), coord, 22.3991, 18.0234,
+               rayStrength(rayPos, normalize(finalRayDir + vec2(-0.075, 0.0)), coord, 22.3991, 18.0234,
                            raysSpeed);
   vec4 rays3 = vec4(1.0) *
                rayStrength(rayPos, finalRayDir, coord, 15.6789, 33.4567,
                            raysSpeed);
   vec4 rays4 = vec4(1.0) *
-               rayStrength(rayPos, normalize(finalRayDir + vec2(0.025, 0.0)), coord, 44.1234, 12.3456,
+               rayStrength(rayPos, normalize(finalRayDir + vec2(0.075, 0.0)), coord, 44.1234, 12.3456,
                            raysSpeed);
   vec4 rays5 = vec4(1.0) *
-               rayStrength(rayPos, normalize(finalRayDir + vec2(0.05, 0.0)), coord, 28.9012, 39.8765,
+               rayStrength(rayPos, normalize(finalRayDir + vec2(0.15, 0.0)), coord, 28.9012, 39.8765,
                            raysSpeed);
 
   // Make each ray more distinct by using max instead of addition
@@ -299,6 +299,7 @@ void main() {
     gl.uniform2f(rayDirLocation, dir[0], dir[1]);
 
     const loop = (t: number) => {
+      // Update time uniform for animation
       gl.uniform1f(timeLocation, t * 0.001);
 
       gl.clearColor(0, 0, 0, 0);
@@ -309,9 +310,11 @@ void main() {
       gl.flush();
       gl.endFrameEXP();
       
+      // Continue animation loop
       animationIdRef.current = requestAnimationFrame(loop);
     };
 
+    // Start the animation loop
     animationIdRef.current = requestAnimationFrame(loop);
   };
 

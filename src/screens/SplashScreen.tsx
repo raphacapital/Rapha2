@@ -21,7 +21,7 @@ export default function SplashScreen() {
       <LightRays
         raysOrigin="top-center"
         raysColor="#FFF79A" // User changed to yellow
-        raysSpeed={0.5} // User changed speed
+        raysSpeed={1} // User changed speed
         lightSpread={0.05} // Assistant changed for prominence
         rayLength={5} // User changed length
         pulsating={true} // Assistant added
