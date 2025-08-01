@@ -114,7 +114,6 @@ export default function LoginScreen() {
           cornerRadius={8}
           style={styles.appleButton}
           onPress={handleAppleSignIn}
-          disabled={isLoading}
         />
         
         {isLoading && (
